@@ -21,7 +21,7 @@ const TaskSection: React.FC<{
     <div className=" h-full w-1/3 flex flex-col gap-2">
       <h1 className="font-montserrat text-lg text-white">{title}</h1>
       <div
-        className={`${className} w-full grow bg-neutral-200 rounded-lg py-4 px-4 flex flex-col gap-2`}
+        className={`${className} w-full grow rounded-lg py-4 px-4 flex flex-col gap-2`}
       >
         {children}
       </div>
