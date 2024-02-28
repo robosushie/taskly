@@ -21,7 +21,10 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@store/*": ["./src/store/*"],
+      "@auth/*": ["src/firebase/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": [

@@ -3,6 +3,7 @@ import DynamicGradient from "@/components/dynamic-gradient";
 import LoginBox from "@/components/login/login-box";
 import Navbar from "@/components/navbar";
 import Scene from "@/components/scene";
+import { useEffect } from "react";
 
 const Login = () => {
   return (

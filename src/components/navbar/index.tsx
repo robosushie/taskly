@@ -26,9 +26,13 @@ const Navbar = () => {
         <div className="text-xl lg:text-3xl">Taskly</div>
       </div>
       {pathname === "/" && (
-        <div className="hidden lg:flex text-base justify-center items-center gap-10">
-          <MenuItem title="Login" url="/login" />
-          <MenuItem title="Register" url="/register" />
+        <div className="flex text-base justify-center items-center gap-10">
+          <MenuItem className="flex" title="Login" url="/login" />
+          <MenuItem
+            className="hidden lg:flex"
+            title="Register"
+            url="/register"
+          />
         </div>
       )}
     </section>

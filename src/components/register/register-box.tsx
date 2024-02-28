@@ -1,6 +1,13 @@
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
+import useAuth from "@/hooks/useAuth";
 
 const RegisterBox = () => {
+  const { registerEmail } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
   return (
     <div className="absolute z-50 w-full h-full flex justify-center items-center">
       <div className="w-10/12 lg:w-[500px] py-8 px-6 lg:px-10 backdrop-brightness-50 backdrop-blur-xl rounded-xl shadow-lg text-white flex flex-col gap-6">
@@ -11,6 +18,10 @@ const RegisterBox = () => {
           <div className="w-full flex flex-col">
             <p className="text-white text-xs">Email</p>
             <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               className="bg-transparent border-[1px] rounded text-sm p-2 border-neutral-300 focus:border-white text-neutral-300 focus:text-white outline-none"
               placeholder="Enter Email"
             />
@@ -19,11 +30,21 @@ const RegisterBox = () => {
           <div className="w-full flex flex-col">
             <p className="text-white text-xs">Password</p>
             <input
+              type="password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               className="bg-transparent border-[1px] rounded text-sm p-2 border-neutral-300 focus:border-white text-neutral-300 focus:text-white outline-none"
               placeholder="Enter Password"
             />
           </div>
-          <div className="rounded bg-blue-500 w-36 h-9 flex justify-center items-center">
+          <div
+            className="rounded bg-blue-500 w-36 h-9 flex justify-center items-center cursor-pointer"
+            onClick={() => {
+              const userCredentials = registerEmail(email, password);
+            }}
+          >
             Register
           </div>
         </div>

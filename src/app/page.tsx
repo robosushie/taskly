@@ -3,7 +3,7 @@ import DynamicGradient from "@/components/dynamic-gradient";
 import HeroSection from "@/components/hero-section";
 import Navbar from "@/components/navbar";
 import Scene from "@/components/scene";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Home = () => {
   return (
